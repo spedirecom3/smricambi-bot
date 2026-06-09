@@ -1,0 +1,36 @@
+{
+  "name": "smricambi-bot",
+  "main": "src/index.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "triggers": {
+    "crons": [
+      "0 3 * * *"
+    ]
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "r2_buckets": [
+    {
+      "binding": "SMR_BUCKET",
+      "bucket_name": "smricambi-chat-files"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "id": "643801b9eb9d4ac98f6c5b12f1252556",
+      "binding": "SMR_DB"
+    }
+  ],
+  "vectorize": [
+    {
+      "binding": "VECTORIZE_INDEX",
+      "index_name": "smricambi-index"
+    }
+  ]
+}
