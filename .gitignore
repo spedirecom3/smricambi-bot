@@ -165,3 +165,8 @@ dist
 .env*
 !.env.example
 .wrangler/
+
+# Added cleanup ignores
+.wrangler-dry-run/
+*.backup
+*.bak
